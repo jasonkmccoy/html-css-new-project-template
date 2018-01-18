@@ -1,10 +1,12 @@
 /* Main SCSS File */
 
-// Reset
+// Reset (always have at top of file)
 @import "normalize";
 
-// Components
+// Helper functions
 @import "helper";
+// Include bourbon, a really useful sass mixins library
+@import "bourbon/bourbon";
 
 // Author custom styles
 
@@ -14,5 +16,5 @@
 
 
 
-// Print styles
+// Print styles (always have at bottom of file)
 @import "print";
