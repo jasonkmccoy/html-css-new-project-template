@@ -5,15 +5,12 @@
 
 // Helper functions
 @import "helper";
-// Include bourbon, a really useful sass mixins library
+// Include bourbon and css3-mixins
+// whicn are very useful sass libraries
 @import "bourbon/bourbon";
+@import "css3-mixins.scss";
 
 // Author custom styles
-
-
-
-
-
 
 
 // Print styles (always have at bottom of file)
