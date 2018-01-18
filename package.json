@@ -1,0 +1,26 @@
+{
+  "name": "html-css-new-project-template",
+  "version": "1.0.0",
+  "description": "New Project Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonkmccoy/html-css-new-project-template.git"
+  },
+  "author": "Jason McCoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonkmccoy/html-css-new-project-template/issues"
+  },
+  "homepage": "https://github.com/jasonkmccoy/html-css-new-project-template#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.3"
+  }
+}
