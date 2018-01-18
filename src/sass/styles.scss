@@ -3,8 +3,12 @@
 // Reset (always have at top of file)
 @import "normalize";
 
+// Default Styles
+@import "default";
+
 // Helper functions
 @import "helper";
+
 // Include bourbon and css3-mixins
 // whicn are very useful sass libraries
 @import "bourbon/bourbon";
