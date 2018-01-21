@@ -1,76 +1,88 @@
-.sidebar {
-  grid-area: sidebar;
+header {
+    background-color: #ffdb3a;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(100, 100, 100);
+    color: #fff;
+    font-size: 1.2rem;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar1,
+.sidebar2 {
+    background-color: rgb(230, 230, 230);
+    text-align: center;
+}
+
+header,
+.sidebar1,
+.sidebar2,
+main {
+    padding: 15px;
+}
+
+/* **************************
+
+	Holy Grail Layout with CSS Grid
+
+************************** */
+
+/* Define grid areas */
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+main {
+    grid-area: main;
+}
+
+.sidebar1 {
+    grid-area: sidebar1;
 }
 
 .sidebar2 {
-  grid-area: sidebar2;
-}
-
-.content {
-  grid-area: content;
-}
-
-.header {
-  grid-area: header;
-}
-
-.footer {
-  grid-area: footer;
+    grid-area: sidebar2;
 }
 
 .wrapper {
-  background-color: #fff;
-  color: #444;
+    display: grid;
+    grid-template-areas: "header header header"
+	                     "sidebar1 main sidebar2"
+	                     "footer footer footer";
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 100px
+						1fr
+						30px;
+    min-height: 100vh;
 }
 
-.wrapper {
-  display: -ms-grid;
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-gap: 1em;
-  grid-template-areas:
-  "header"
-  "sidebar"
-  "content"
-  "sidebar2"
-  "footer"
-}
-
-@media only screen and (min-width: 500px)  {
-  .wrapper {
-    grid-template-columns: 20% auto;
-    grid-template-areas:
-    "header   header"
-    "sidebar  content"
-    "sidebar2 sidebar2"
-    "footer   footer";
-  }
-}
-
-@media only screen and (min-width: 600px)   {
-  .wrapper {
-    grid-gap: 20px;
-    grid-template-columns: 120px auto 120px;
-    grid-template-areas:
-    "header  header  header"
-    "sidebar content sidebar2"
-    "footer  footer  footer";
-  }
-}
-
-.box {
-  background-color: #444;
-  color: #fff;
-  padding: 10px;
-}
-
-.header,
-.footer {
-  background-color: #999;
-}
-
-.sidebar2 {
-  background-color: #ccc;
-  color: #444;
+@media screen and (max-width: 600px) {
+    .wrapper {
+        grid-template-areas: "header"
+		                     "sidebar1"
+		                     "main"
+		                     "sidebar2"
+		                     "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 100px
+							50px
+							1fr
+							50px
+							30px;
+    }
 }
