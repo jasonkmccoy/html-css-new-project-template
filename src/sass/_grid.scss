@@ -65,9 +65,7 @@ main {
 	                     "sidebar1 main sidebar2"
 	                     "footer footer footer";
     grid-template-columns: 150px 1fr 150px;
-    grid-template-rows: 100px
-						1fr
-						30px;
+    grid-template-rows: 100px 1fr 30px;
     min-height: 100vh;
 }
 
@@ -79,10 +77,6 @@ main {
 		                     "sidebar2"
 		                     "footer";
         grid-template-columns: 100%;
-        grid-template-rows: 100px
-							50px
-							1fr
-							50px
-							30px;
+        grid-template-rows: 100px 50px 1fr 50px 30px;
     }
 }

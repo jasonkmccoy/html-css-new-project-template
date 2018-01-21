@@ -17,7 +17,7 @@ gulp.task('workflow', function () {
 		.pipe(cssnano())
 		.pipe(sourcemaps.write('./'))
 
-	.pipe(gulp.dest('./dist/css/'))
+	.pipe(gulp.dest('./dist/app/css/'))
 });
 
 gulp.task('default', function () {
