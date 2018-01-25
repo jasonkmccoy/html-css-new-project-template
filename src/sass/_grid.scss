@@ -1,82 +1,120 @@
-header {
-    background-color: #ffdb3a;
-    font-size: 2rem;
-    font-weight: 700;
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+/* ******************************************************************
 
-footer {
-    background-color: rgb(100, 100, 100);
-    color: #fff;
-    font-size: 1.2rem;
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+	Holy Grail Layout for browsers that do NOT support CSS Grid Layout
 
-.sidebar1,
-.sidebar2 {
-    background-color: rgb(230, 230, 230);
-    text-align: center;
-}
+********************************************************************** */
 
-header,
-.sidebar1,
-.sidebar2,
-main {
-    padding: 15px;
-}
-
-/* **************************
-
-	Holy Grail Layout with CSS Grid
-
-************************** */
-
-/* Define grid areas */
-header {
-    grid-area: header;
-}
-
-footer {
-    grid-area: footer;
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  display: flex;
 }
 
 main {
-    grid-area: main;
+  flex: 1 0 auto;
 }
 
-.sidebar1 {
-    grid-area: sidebar1;
-}
-
-.sidebar2 {
-    grid-area: sidebar2;
-}
-
-.wrapper {
-    display: grid;
-    grid-template-areas: "header header header"
-	                     "sidebar1 main sidebar2"
-	                     "footer footer footer";
-    grid-template-columns: 150px 1fr 150px;
-    grid-template-rows: 100px 1fr 30px;
-    min-height: 100vh;
-}
-
-@media screen and (max-width: 600px) {
-    .wrapper {
-        grid-template-areas: "header"
-		                     "sidebar1"
-		                     "main"
-		                     "sidebar2"
-		                     "footer";
-        grid-template-columns: 100%;
-        grid-template-rows: 100px 50px 1fr 50px 30px;
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+      nav, aside {
+          width: 100%;
     }
+  }
+}
+
+
+/* *************************************************************
+
+	Holy Grail Layout for browsers that DO support CSS Grid Layout
+
+**************************************************************** */
+
+@supports(display: grid) {
+  .notice {
+    display: none;
+  }
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-center, footer, header {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "header header header"
+    "nav content side"
+    "footer footer footer";
+  height: 100vh;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+}
+
+header {
+  background: #F4991A;
+  grid-area: header;
+  padding: 1rem 0;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav, aside {
+  background: #F2EAD3;
+}
+
+nav, aside, main {
+  text-transform: uppercase;
+  color: lightslategray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  grid-area: nav;
+  margin-left: 0.5rem;
+}
+
+main {
+  grid-area: content;
+  width: 100%;
+  background: #F9F5F0;
+}
+
+aside {
+  grid-area: side;
+  margin-right: 0.5rem;
+}
+
+footer {
+  background: pink;
+  grid-area: footer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas: "header"
+      "nav"
+      "content"
+      "side"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(75px, auto) 1fr minmax(75px, auto) auto;
+  }
+
+  nav, aside {
+    margin: 0;
+  }
 }
