@@ -1,14 +1,11 @@
 /* ******************************************************************
-
 	Holy Grail Layout for browsers that do NOT support CSS Grid Layout
-
 ********************************************************************** */
 
 .container {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  display: flex;
 }
 
 main {
@@ -17,6 +14,7 @@ main {
 
 @media (max-width: 700px) {
   .container {
+    display: flex;
     flex-direction: column;
       nav, aside {
           width: 100%;
@@ -26,9 +24,7 @@ main {
 
 
 /* *************************************************************
-
 	Holy Grail Layout for browsers that DO support CSS Grid Layout
-
 **************************************************************** */
 
 @supports(display: grid) {
