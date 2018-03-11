@@ -1,4 +1,4 @@
-<?php require('dist/app/includes/head.php') ?>
+<?php require 'dist/app/includes/head-inc.php'; ?>
 
 <div class="container">
   <header>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In iusto debitis, amet inventore, iure repellendus distinctio, provident nobis pariatur quia ex tempora. Voluptates sapiente, dolor unde aliquam, perspiciatis delectus earum?</header>
@@ -12,4 +12,4 @@
   <footer>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi recusandae iste aliquid quasi asperiores eaque rerum, deleniti hic pariatur ullam quam. Reiciendis aliquam rerum ab voluptatem nulla dolorum officia nam!</footer>
 </div>
 
-<?php require('dist/app/includes/footer.php') ?>
+<?php require 'dist/app/includes/footer-inc.php'; ?>
